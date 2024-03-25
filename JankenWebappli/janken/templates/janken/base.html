@@ -1,0 +1,39 @@
+{% load static%}
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{%block title%}{%endblock%}</title>
+    <link rel="stylesheet" href="{% static 'janken/css/janken.css'%}">
+</head>
+<body class="container">
+    <nav class="nav-bar">
+        <ul>
+            <li class="nav-item">
+                <a href="{% url 'index'%}">ホーム</a>
+            </li>
+            <li class="nav-item">
+                <a href="{% url 'janken'%}">じゃんけん</a>
+            </li>
+            <li class="nav-item">
+                <a href="{%url 'ranking'%}">ランキング</a>
+            </li>
+            <li class="nav-item">
+                <a href="{%url 'logout'%}">ログアウト</a>
+            </li>
+            <li class="nav-item">
+                <span><span class="username-text">{{user.username}}</span>でログイン中</span>
+            </li>
+        
+            <li class="nav-item">
+                <a href="https://daeudaeu.com/django-janken/" target="_blank">参考サイト</a>
+            </li>
+
+        </ul>
+    </nav>
+    <div class="header">{%block header%}{% endblock%}</div>
+    <div class="content">{%block content%}{%endblock%}</div>
+    
+</body>
+</html>
