@@ -1,0 +1,3 @@
+==> 2024-03-25 17:44:21 <==
+# cmd: /root/anaconda3/bin/conda create --prefix /home/centos/janken/janken_venv
+# conda version: 24.1.2

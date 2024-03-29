@@ -37,12 +37,12 @@ SECRET_KEY = os.environ.get("secret_key")
 # SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 
 
 
-ALLOWED_HOSTS = ["153.126.189.82"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -54,7 +54,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "janken"
+    #"janken"
 ]
 
 MIDDLEWARE = [
@@ -135,7 +135,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = "ja"
 
-TIME_ZONE = "Asia/Tokyo"
+#TIME_ZONE = "Asia/Tokyo"
 
 USE_I18N = True
 
@@ -145,8 +145,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
-STATIC_URL = "static/"
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+#STATIC_URL = "static/"
+#STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # STATIC_URL = "/static/"
 # STATIC_ROOT = "/usr/share/nginx/html/"
@@ -156,8 +156,8 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-MEDIA_ROOT = os.path.join(BASE_DIR,"media/")
-MEDIA_URL = "media/"
+#MEDIA_ROOT = os.path.join(BASE_DIR,"media/")
+#MEDIA_URL = "media/"
 
 AUTH_USER_MODEL = "janken.CustomUser"
 
